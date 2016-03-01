@@ -36,7 +36,8 @@ server {
 	}
 
 	location /doc/ {
-		alias /usr/share/doc/;
+		#alias /usr/share/doc/;
+		alias /home/vagrant/Github/NginxConfig/root/usr/share/nginx/www/textToDownload/;
 		autoindex on;
 		allow 127.0.0.1;
 		allow 192.168.33.1;
