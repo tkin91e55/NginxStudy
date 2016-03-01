@@ -39,6 +39,7 @@ server {
 		alias /usr/share/doc/;
 		autoindex on;
 		allow 127.0.0.1;
+		allow 192.168.33.1;
 		deny all;
 	}
 
