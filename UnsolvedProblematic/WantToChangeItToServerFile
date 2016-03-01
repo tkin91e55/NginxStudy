@@ -1,0 +1,17 @@
+diff --git a/root/etc/nginx/sites-available/default b/root/etc/nginx/sites-available/default
+index 3d841bb..f5a9da1 100644
+--- a/root/etc/nginx/sites-available/default
++++ b/root/etc/nginx/sites-available/default
+@@ -35,9 +35,10 @@ server {
+ 		# include /etc/nginx/naxsi.rules
+ 	}
+ 
+-	location /doc/ {
++	location /doc {
+ 		#alias /usr/share/doc/;
+-		alias /home/vagrant/Github/NginxConfig/root/usr/share/nginx/www/textToDownload/;
++		root /home/vagrant/Github/NginxConfig/root/usr/share/nginx/www/textToDownload;
++		try_files $uri $uri/; 
+ 		autoindex on;
+ 		allow 127.0.0.1;
+ 		allow 192.168.33.1;
