@@ -45,7 +45,6 @@ server {
 	}
 
 	location /a/ {
-		#uncertian when work or not
 		root /home/vagrant/Github/NginxConfig/root/usr/share/nginx/wwwAnother;
 		try_files $uri $uri/ /index.html;
 	}
