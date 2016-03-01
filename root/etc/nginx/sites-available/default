@@ -44,6 +44,12 @@ server {
 		deny all;
 	}
 
+	location /a/ {
+		root /home/vagrant/Github/NginxConfig/root/usr/share/nginx/wwwAnother;
+		try_files $uri $uri/ /index.html;
+	}
+
+
 	# Only for nginx-naxsi : process denied requests
 	#location /RequestDenied {
 		# For example, return an error code
